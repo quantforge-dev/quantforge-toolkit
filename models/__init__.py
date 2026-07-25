@@ -1,3 +1,9 @@
 """
-Data models for QuantForge Risk Toolkit.
+Data models for QuantForge Toolkit.
 """
+
+from .asset import Asset
+
+__all__ = [
+    "Asset",
+]
