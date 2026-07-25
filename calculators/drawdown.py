@@ -1,18 +1,18 @@
 """
 Drawdown Calculator
 
-This module provides utilities for calculating drawdown values
-from an account balance.
-
-Author: QuantForge
+Utilities for calculating account drawdown.
 """
 
-from validation.validators import validate_positive_number
+from validation.validators import validate_positive
 
 
-def calculate_drawdown(initial_balance: float, current_balance: float) -> dict:
+def calculate_drawdown(
+    initial_balance: float,
+    current_balance: float,
+) -> dict:
     """
-    Calculate absolute and percentage drawdown.
+    Calculate account drawdown.
 
     Parameters
     ----------
@@ -25,25 +25,40 @@ def calculate_drawdown(initial_balance: float, current_balance: float) -> dict:
     Returns
     -------
     dict
-        {
-            "loss": float,
-            "drawdown_percent": float
-        }
+        Dictionary containing:
+
+        loss
+            Monetary loss.
+
+        drawdown_percent
+            Drawdown percentage.
     """
 
-    validate_positive_number(initial_balance, "initial_balance")
-    validate_positive_number(current_balance, "current_balance")
+    validate_positive(
+        initial_balance,
+        "Initial balance",
+    )
+
+    validate_positive(
+        current_balance,
+        "Current balance",
+    )
 
     if current_balance > initial_balance:
         raise ValueError(
-            "Current balance cannot be greater than initial balance."
+            "Current balance cannot exceed initial balance."
         )
 
     loss = initial_balance - current_balance
 
-    drawdown_percent = (loss / initial_balance) * 100
+    drawdown_percent = (
+        loss / initial_balance
+    ) * 100
 
     return {
         "loss": round(loss, 2),
-        "drawdown_percent": round(drawdown_percent, 2),
+        "drawdown_percent": round(
+            drawdown_percent,
+            2,
+        ),
     }
