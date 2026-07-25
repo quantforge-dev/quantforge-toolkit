@@ -1,66 +1,126 @@
 # QuantForge Risk Toolkit
 
-Professional open-source risk management toolkit for traders and investors.
+Professional open-source Python toolkit for financial risk management, portfolio analytics, and capital preservation.
 
 ## Overview
 
-QuantForge Risk Toolkit is a modular Python project focused on practical risk management utilities for financial markets.
+QuantForge Risk Toolkit is a modular and extensible Python project focused on practical financial calculations.
 
-The project is designed around clean architecture, reliable calculations, and maintainable code.
+The project is designed using clean software engineering principles, reusable modules, input validation, and unit testing.
 
-Current development focuses on building reusable tools for position sizing, portfolio risk analysis, and capital preservation.
+It does **not** provide trading signals or investment advice.
+
+Its purpose is to provide reliable calculation utilities for different financial markets.
 
 ---
 
 ## Features
 
+### Risk Management
+
 - Risk Amount Calculator
 - Position Size Calculator
 - Risk / Reward Calculator
-- Portfolio Allocation
-- Portfolio Risk
 - Drawdown Calculator
+
+### Portfolio Analytics
+
+- Portfolio Allocation
+- Portfolio Summary
 - Sharpe Ratio
+
+---
+
+## Supported Markets
+
+The toolkit is market-agnostic and can be used with:
+
+- Cryptocurrency
+- Forex
+- Stocks
+- ETFs
+- Commodities
+- Bonds
+- Futures
 
 ---
 
 ## Project Structure
 
-```
+```text
 app/
 calculators/
-validation/
 models/
 tests/
+validation/
+
+README.md
+CHANGELOG.md
+LICENSE
+requirements.txt
 ```
 
 ---
 
 ## Design Principles
 
-- Capital preservation first
-- Risk-aware calculations
 - Modular architecture
-- Clear documentation
-- Reliable input validation
+- Clean code
+- Input validation
+- Unit testing
+- Reusable components
+- Open-source development
+
+---
+
+## Current Status
+
+Version:
+
+```
+1.0.0 (In Development)
+```
+
+Completed:
+
+- Risk Amount Calculator
+- Position Size Calculator
+- Drawdown Calculator
+- Risk / Reward Calculator
+- Portfolio Allocation
+- Portfolio Summary
+- Sharpe Ratio
+
+Unit tests are included for all calculators.
 
 ---
 
 ## Roadmap
 
-### Version 1.0
+### Version 1
 
-- Risk Amount Calculator
-- Position Size Calculator
-- Portfolio Allocation
+- Core calculators
+- Portfolio analytics
+- Unit testing
+- Documentation
+- Code cleanup
+
+### Version 2
+
 - Portfolio Risk
-- Drawdown Calculator
-- Sharpe Ratio
-
-More features will be added in future releases.
+- Volatility
+- Variance
+- Correlation
+- Covariance Matrix
+- Value at Risk (VaR)
+- Expected Shortfall (CVaR)
+- Rolling Volatility
+- Rolling Sharpe Ratio
+- Stress Testing
+- Scenario Analysis
 
 ---
 
 ## License
 
-MIT License
+Released under the MIT License.
