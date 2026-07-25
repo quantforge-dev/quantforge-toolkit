@@ -5,8 +5,6 @@ This module provides functionality to calculate the Sharpe Ratio
 for a portfolio or investment.
 """
 
-from math import sqrt
-
 
 def sharpe_ratio(
     expected_return: float,
@@ -35,9 +33,13 @@ def sharpe_ratio(
     """
 
     if standard_deviation <= 0:
-        raise ValueError("Standard deviation must be greater than zero.")
+        raise ValueError(
+            "Standard deviation must be greater than zero."
+        )
 
     return round(
-        (expected_return - risk_free_rate) / standard_deviation,
+        (
+            expected_return - risk_free_rate
+        ) / standard_deviation,
         4,
     )
