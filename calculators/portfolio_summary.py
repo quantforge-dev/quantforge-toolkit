@@ -1,53 +1,61 @@
 """
 Portfolio Summary Calculator.
 
-This module provides functionality to generate a summary of a portfolio,
-including the total portfolio value, number of assets, and allocation
-percentage for each asset.
+Generate summary statistics for a portfolio.
 """
 
-from typing import Dict
+from validation.validators import (
+    validate_not_empty,
+    validate_non_negative,
+)
 
 
-def portfolio_summary(portfolio: Dict[str, float]) -> Dict[str, object]:
+def portfolio_summary(
+    portfolio: dict[str, float],
+) -> dict[str, object]:
     """
-    Generate a summary of a portfolio.
-
-    Args:
-        portfolio: A dictionary where the key is the asset name
-            and the value is its monetary value.
-
-    Returns:
-        A dictionary containing:
-            - total_value
-            - number_of_assets
-            - allocations
-
-    Raises:
-        ValueError:
-            If the portfolio is empty.
-            If any asset value is negative.
+    Generate a portfolio summary.
     """
 
-    if not portfolio:
-        raise ValueError("Portfolio cannot be empty.")
+    validate_not_empty(
+        portfolio,
+        "Portfolio",
+    )
 
-    if any(value < 0 for value in portfolio.values()):
-        raise ValueError("Asset values cannot be negative.")
+    for asset, value in portfolio.items():
+        validate_non_negative(
+            value,
+            f"{asset} value",
+        )
 
-    total_value = sum(portfolio.values())
+    total_value = sum(
+        portfolio.values()
+    )
 
     allocations = {}
 
     if total_value > 0:
+
         for asset, value in portfolio.items():
-            allocations[asset] = round((value / total_value) * 100, 2)
+
+            allocations[asset] = round(
+                (value / total_value) * 100,
+                2,
+            )
+
     else:
+
         for asset in portfolio:
+
             allocations[asset] = 0.0
 
     return {
-        "total_value": total_value,
-        "number_of_assets": len(portfolio),
+        "total_value": round(
+            total_value,
+            2,
+        ),
+        "number_of_assets": len(
+            portfolio,
+        ),
         "allocations": allocations,
     }
