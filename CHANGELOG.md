@@ -2,40 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on **Keep a Changelog** and the project follows **Semantic Versioning**.
-
 ---
 
-## [1.0.0] - In Development
+## Version 1.0.0 (In Development)
 
 ### Added
 
-#### Project Structure
-
-- Initial project architecture
-- Modular package structure
+- Project structure
 - Validation module
-- Unit testing framework
-
-#### Calculators
-
 - Risk Amount Calculator
 - Position Size Calculator
-- Drawdown Calculator
 - Risk / Reward Calculator
+- Drawdown Calculator
 - Portfolio Allocation Calculator
 - Portfolio Summary Calculator
+- Portfolio Volatility Calculator
 - Sharpe Ratio Calculator
-
-#### Documentation
-
-- Project README
-- CHANGELOG
+- Profit / Loss Calculator
+- Break-even Calculator
+- Compound Growth Calculator
+- Expectancy Calculator
+- Kelly Criterion Calculator
+- Asset data model
+- Unit tests
+- GitHub Actions CI
+- Project documentation
 - MIT License
-
-#### Testing
-
-- Unit tests for all Version 1 calculators
 
 ---
 
