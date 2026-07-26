@@ -10,39 +10,38 @@ Professional open-source risk management toolkit for traders and investors.
 
 ## Overview
 
-QuantForge Risk Toolkit is an open-source Python project focused on practical
-risk management utilities for financial markets.
+QuantForge Risk Toolkit is an open-source Python toolkit focused on practical
+risk management and portfolio analytics for financial markets.
 
-The project emphasizes:
-
-- Clean architecture
-- Reliable financial calculations
-- Reusable modules
-- Professional documentation
-- Automated testing using GitHub Actions
-
-The toolkit is being developed as a long-term project and will continue to
-expand with additional quantitative finance tools.
+The project is designed with clean architecture, modular components, automated
+testing, and professional documentation to serve as a reusable quantitative
+finance toolkit.
 
 ---
 
-# Features
+## Features
 
 Current modules include:
 
 - Risk Amount Calculator
 - Position Size Calculator
 - Risk / Reward Calculator
-- Portfolio Allocation
-- Portfolio Summary
 - Drawdown Calculator
+- Portfolio Allocation Calculator
+- Portfolio Summary Calculator
+- Portfolio Volatility Calculator
 - Sharpe Ratio Calculator
+- Profit / Loss Calculator
+- Break-even Calculator
+- Compound Growth Calculator
+- Expectancy Calculator
+- Kelly Criterion Calculator
 
 ---
 
-# Project Structure
+## Project Structure
 
-```
+```text
 quantforge-toolkit/
 │
 ├── app/
@@ -52,74 +51,78 @@ quantforge-toolkit/
 ├── validation/
 │
 ├── README.md
-├── LICENSE
 ├── CHANGELOG.md
-└── requirements.txt
+├── LICENSE
+├── requirements.txt
 ```
 
 ---
 
-# Example
-
-```python
-from calculators.risk_amount import calculate_risk_amount
-
-risk = calculate_risk_amount(
-    account_balance=10000,
-    risk_percent=1,
-)
-
-print(risk)
-
-# Output:
-# 100.0
-```
-
----
-
-# Running Tests
-
-Execute all unit tests with:
+## Running Tests
 
 ```bash
 python -m unittest discover
 ```
 
-GitHub Actions automatically runs the complete test suite on every push.
+GitHub Actions automatically executes all unit tests on every push.
 
 ---
 
-# Design Principles
+## Design Principles
 
-- Capital preservation first
-- Risk-aware calculations
 - Modular architecture
-- Clear documentation
-- Clean code
+- Reusable components
+- Strong input validation
+- Reliable financial calculations
 - Automated testing
+- Clean documentation
 
 ---
 
-# Roadmap
+## Supported Markets
+
+The toolkit is designed to be market-agnostic and supports calculations for:
+
+- Cryptocurrency
+- Forex
+- Stocks
+- ETFs
+- Commodities
+- Bonds
+- Futures
+
+---
+
+## Roadmap
 
 ### Version 1.x
 
-- Portfolio Metrics
-- Volatility Calculator
-- Kelly Criterion
+- Improve portfolio analytics
+- Improve validation
+- Additional performance metrics
+
+### Version 2.x
+
+- Variance
+- Volatility
+- Correlation
+- Covariance Matrix
 - Value at Risk (VaR)
-- Expected Shortfall
-- Monte Carlo Simulation
-- Performance Metrics
+- Expected Shortfall (CVaR)
+- Diversification Metrics
+- Rolling Volatility
+- Rolling Sharpe Ratio
+- Scenario Analysis
+- Stress Testing
 
 ---
 
-# Contributing
+## Contributing
 
-Contributions, suggestions and pull requests are welcome.
+Contributions, suggestions, and pull requests are welcome.
 
 ---
 
-# License
+## License
 
 Released under the MIT License.
