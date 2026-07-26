@@ -1,59 +1,69 @@
-# QuantForge Risk Toolkit
+# QuantForge Toolkit
 
-Professional open-source risk management toolkit for traders and investors.
-
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Tests](https://github.com/quantforge-dev/quantforge-toolkit/actions/workflows/python-tests.yml/badge.svg)
-
----
+A professional open-source Python toolkit for financial risk management and portfolio analytics.
 
 ## Overview
 
-QuantForge Risk Toolkit is an open-source Python toolkit focused on practical
-risk management and portfolio analytics for financial markets.
+QuantForge Toolkit is designed to provide reusable, market-agnostic financial calculation modules.
 
-The project is designed with clean architecture, modular components, automated
-testing, and professional documentation to serve as a reusable quantitative
-finance toolkit.
+The project focuses on:
+
+- Risk management
+- Portfolio analytics
+- Clean architecture
+- Reliable validation
+- Comprehensive unit testing
+
+No trading signals or investment advice are provided.
 
 ---
 
 ## Features
 
-Current modules include:
+### Risk Management
 
 - Risk Amount Calculator
 - Position Size Calculator
 - Risk / Reward Calculator
 - Drawdown Calculator
-- Portfolio Allocation Calculator
-- Portfolio Summary Calculator
-- Portfolio Volatility Calculator
-- Sharpe Ratio Calculator
-- Profit / Loss Calculator
-- Break-even Calculator
-- Compound Growth Calculator
-- Expectancy Calculator
-- Kelly Criterion Calculator
+
+### Portfolio Analytics
+
+- Portfolio Allocation
+- Portfolio Summary
+- Sharpe Ratio
+- Variance
+- Volatility
 
 ---
 
 ## Project Structure
 
 ```text
-quantforge-toolkit/
-│
-├── app/
-├── calculators/
-├── models/
-├── tests/
-├── validation/
-│
-├── README.md
-├── CHANGELOG.md
-├── LICENSE
-├── requirements.txt
+.github/
+app/
+calculators/
+docs/
+examples/
+models/
+tests/
+validation/
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/quantforge-dev/quantforge-toolkit.git
+```
+
+Enter the project:
+
+```bash
+cd quantforge-toolkit
 ```
 
 ---
@@ -64,65 +74,45 @@ quantforge-toolkit/
 python -m unittest discover
 ```
 
-GitHub Actions automatically executes all unit tests on every push.
+---
+
+## Running the Demo
+
+```bash
+python app/main.py
+```
 
 ---
 
-## Design Principles
+## Examples
 
-- Modular architecture
-- Reusable components
-- Strong input validation
-- Reliable financial calculations
-- Automated testing
-- Clean documentation
+Example scripts are available in:
 
----
-
-## Supported Markets
-
-The toolkit is designed to be market-agnostic and supports calculations for:
-
-- Cryptocurrency
-- Forex
-- Stocks
-- ETFs
-- Commodities
-- Bonds
-- Futures
+```text
+examples/
+```
 
 ---
 
-## Roadmap
+## Project Status
 
-### Version 1.x
+Current status:
 
-- Improve portfolio analytics
-- Improve validation
-- Additional performance metrics
+**Version 1.0.0 (In Development)**
 
-### Version 2.x
+The project is under active development.
 
-- Variance
-- Volatility
-- Correlation
+Future releases will introduce advanced quantitative finance modules including:
+
+- Correlation Matrix
 - Covariance Matrix
 - Value at Risk (VaR)
 - Expected Shortfall (CVaR)
-- Diversification Metrics
-- Rolling Volatility
-- Rolling Sharpe Ratio
-- Scenario Analysis
+- Monte Carlo Simulation
 - Stress Testing
-
----
-
-## Contributing
-
-Contributions, suggestions, and pull requests are welcome.
 
 ---
 
 ## License
 
-Released under the MIT License.
+MIT License
