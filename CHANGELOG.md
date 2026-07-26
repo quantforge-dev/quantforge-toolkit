@@ -8,26 +8,21 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Project structure
-- Validation module
+- Modular project structure
+- Validation utilities
 - Risk Amount Calculator
 - Position Size Calculator
 - Risk / Reward Calculator
 - Drawdown Calculator
 - Portfolio Allocation Calculator
 - Portfolio Summary Calculator
-- Portfolio Volatility Calculator
 - Sharpe Ratio Calculator
-- Profit / Loss Calculator
-- Break-even Calculator
-- Compound Growth Calculator
-- Expectancy Calculator
-- Kelly Criterion Calculator
-- Asset data model
+- Variance Calculator
+- Volatility Calculator
 - Unit tests
-- GitHub Actions CI
-- Project documentation
-- MIT License
+- GitHub Actions workflow
+- Documentation
+- Usage examples
 
 ---
 
