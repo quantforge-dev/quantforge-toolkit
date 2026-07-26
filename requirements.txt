@@ -1,4 +1,9 @@
-# QuantForge Risk Toolkit
+# QuantForge Toolkit
 
-# This project currently uses only Python Standard Library.
-# External dependencies will be added in future releases.
+# This project currently relies only on the Python Standard Library.
+
+# Python Version
+# >=3.12
+
+# External dependencies will be introduced
+# in future releases if required.
