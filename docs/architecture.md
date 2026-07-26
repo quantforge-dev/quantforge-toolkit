@@ -4,13 +4,21 @@
 
 QuantForge Toolkit follows a modular architecture.
 
-Each calculator is independent and reusable.
+Each calculator is implemented as an independent module with a single responsibility.
 
-Validation logic is centralized inside the `validation`
-package.
+## Directory Structure
 
-Unit tests are isolated inside the `tests`
-directory.
+- `app/` – Application entry point.
+- `calculators/` – Financial calculation modules.
+- `validation/` – Shared validation utilities.
+- `tests/` – Unit tests.
+- `examples/` – Usage examples.
+- `docs/` – Project documentation.
 
-The project is designed to support future portfolio
-analytics modules without changing the public API.
+## Design Goals
+
+- Modular
+- Maintainable
+- Testable
+- Market-agnostic
+- Easy to extend
