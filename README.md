@@ -1,126 +1,125 @@
 # QuantForge Risk Toolkit
 
-Professional open-source Python toolkit for financial risk management, portfolio analytics, and capital preservation.
+Professional open-source risk management toolkit for traders and investors.
+
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Tests](https://github.com/quantforge-dev/quantforge-toolkit/actions/workflows/python-tests.yml/badge.svg)
+
+---
 
 ## Overview
 
-QuantForge Risk Toolkit is a modular and extensible Python project focused on practical financial calculations.
+QuantForge Risk Toolkit is an open-source Python project focused on practical
+risk management utilities for financial markets.
 
-The project is designed using clean software engineering principles, reusable modules, input validation, and unit testing.
+The project emphasizes:
 
-It does **not** provide trading signals or investment advice.
+- Clean architecture
+- Reliable financial calculations
+- Reusable modules
+- Professional documentation
+- Automated testing using GitHub Actions
 
-Its purpose is to provide reliable calculation utilities for different financial markets.
+The toolkit is being developed as a long-term project and will continue to
+expand with additional quantitative finance tools.
 
 ---
 
-## Features
+# Features
 
-### Risk Management
+Current modules include:
 
 - Risk Amount Calculator
 - Position Size Calculator
 - Risk / Reward Calculator
-- Drawdown Calculator
-
-### Portfolio Analytics
-
 - Portfolio Allocation
 - Portfolio Summary
-- Sharpe Ratio
+- Drawdown Calculator
+- Sharpe Ratio Calculator
 
 ---
 
-## Supported Markets
+# Project Structure
 
-The toolkit is market-agnostic and can be used with:
-
-- Cryptocurrency
-- Forex
-- Stocks
-- ETFs
-- Commodities
-- Bonds
-- Futures
-
----
-
-## Project Structure
-
-```text
-app/
-calculators/
-models/
-tests/
-validation/
-
-README.md
-CHANGELOG.md
-LICENSE
-requirements.txt
+```
+quantforge-toolkit/
+│
+├── app/
+├── calculators/
+├── models/
+├── tests/
+├── validation/
+│
+├── README.md
+├── LICENSE
+├── CHANGELOG.md
+└── requirements.txt
 ```
 
 ---
 
-## Design Principles
+# Example
 
+```python
+from calculators.risk_amount import calculate_risk_amount
+
+risk = calculate_risk_amount(
+    account_balance=10000,
+    risk_percent=1,
+)
+
+print(risk)
+
+# Output:
+# 100.0
+```
+
+---
+
+# Running Tests
+
+Execute all unit tests with:
+
+```bash
+python -m unittest discover
+```
+
+GitHub Actions automatically runs the complete test suite on every push.
+
+---
+
+# Design Principles
+
+- Capital preservation first
+- Risk-aware calculations
 - Modular architecture
+- Clear documentation
 - Clean code
-- Input validation
-- Unit testing
-- Reusable components
-- Open-source development
+- Automated testing
 
 ---
 
-## Current Status
+# Roadmap
 
-Version:
+### Version 1.x
 
-```
-1.0.0 (In Development)
-```
-
-Completed:
-
-- Risk Amount Calculator
-- Position Size Calculator
-- Drawdown Calculator
-- Risk / Reward Calculator
-- Portfolio Allocation
-- Portfolio Summary
-- Sharpe Ratio
-
-Unit tests are included for all calculators.
-
----
-
-## Roadmap
-
-### Version 1
-
-- Core calculators
-- Portfolio analytics
-- Unit testing
-- Documentation
-- Code cleanup
-
-### Version 2
-
-- Portfolio Risk
-- Volatility
-- Variance
-- Correlation
-- Covariance Matrix
+- Portfolio Metrics
+- Volatility Calculator
+- Kelly Criterion
 - Value at Risk (VaR)
-- Expected Shortfall (CVaR)
-- Rolling Volatility
-- Rolling Sharpe Ratio
-- Stress Testing
-- Scenario Analysis
+- Expected Shortfall
+- Monte Carlo Simulation
+- Performance Metrics
 
 ---
 
-## License
+# Contributing
+
+Contributions, suggestions and pull requests are welcome.
+
+---
+
+# License
 
 Released under the MIT License.
