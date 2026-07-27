@@ -16,8 +16,33 @@ class Portfolio:
         weight,
     ):
         self.assets.append(
-            Asset(symbol, weight)
+            Asset(
+                symbol,
+                weight,
+            )
         )
+
+    def remove_asset(
+        self,
+        symbol,
+    ):
+        self.assets = [
+            asset
+            for asset in self.assets
+            if asset.symbol != symbol
+        ]
+
+    def symbols(self):
+        return [
+            asset.symbol
+            for asset in self.assets
+        ]
+
+    def weights(self):
+        return [
+            asset.weight
+            for asset in self.assets
+        ]
 
     def total_weight(self):
         return round(
