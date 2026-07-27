@@ -45,7 +45,12 @@ class TestMarkowitzOptimizer(unittest.TestCase):
 
         self.assertEqual(
             result["return"],
-            12,
+            9,
+        )
+
+        self.assertEqual(
+            result["volatility"],
+            4,
         )
 
     def test_empty(self):
