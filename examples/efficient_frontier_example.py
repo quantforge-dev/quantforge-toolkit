@@ -1,26 +1,31 @@
+"""
+Example:
+Efficient Frontier
+"""
+
 from calculators.efficient_frontier import (
-    portfolio_point,
+    calculate_portfolio_point,
 )
 
-returns = [
-    0.10,
-    0.20,
-]
+returns = {
+    "BTC": 12,
+    "ETH": 8,
+}
 
-weights = [
-    0.4,
-    0.6,
-]
+weights = {
+    "BTC": 60,
+    "ETH": 40,
+}
 
-covariance = [
-    [0.01, 0.002],
-    [0.002, 0.04],
-]
+volatilities = {
+    "BTC": 0.40,
+    "ETH": 0.35,
+}
 
-print(
-    portfolio_point(
-        returns,
-        weights,
-        covariance,
-    )
+result = calculate_portfolio_point(
+    returns,
+    weights,
+    volatilities,
 )
+
+print(result)
