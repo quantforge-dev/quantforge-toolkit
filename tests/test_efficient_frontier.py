@@ -1,44 +1,53 @@
 import unittest
 
 from calculators.efficient_frontier import (
-    portfolio_point,
+    calculate_portfolio_point,
 )
 
 
 class TestEfficientFrontier(unittest.TestCase):
 
-    def test_frontier_point(self):
+    def test_valid_portfolio_point(self):
 
-        returns = [
-            0.10,
-            0.20,
-        ]
+        returns = {
+            "BTC": 12,
+            "ETH": 8,
+        }
 
-        weights = [
-            0.4,
-            0.6,
-        ]
+        weights = {
+            "BTC": 60,
+            "ETH": 40,
+        }
 
-        covariance = [
-            [0.01, 0.002],
-            [0.002, 0.04],
-        ]
+        volatilities = {
+            "BTC": 0.40,
+            "ETH": 0.35,
+        }
 
-        result = portfolio_point(
+        result = calculate_portfolio_point(
             returns,
             weights,
-            covariance,
+            volatilities,
         )
 
-        self.assertIn(
-            "return",
-            result,
-        )
+        self.assertIn("return", result)
+        self.assertIn("volatility", result)
 
-        self.assertIn(
-            "volatility",
-            result,
-        )
+        self.assertEqual(result["return"], 20)
+
+    def test_empty_returns(self):
+
+        with self.assertRaises(ValueError):
+
+            calculate_portfolio_point(
+                {},
+                {
+                    "BTC": 100,
+                },
+                {
+                    "BTC": 0.40,
+                },
+            )
 
 
 if __name__ == "__main__":
