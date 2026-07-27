@@ -1,23 +1,46 @@
 # QuantForge Toolkit Roadmap
 
-## Version 1.0
+## Version 1.0 ✅
 
-- Core risk calculators
-- Portfolio analytics
-- Validation framework
-- Automated tests
-- Documentation
-- GitHub Actions
+- [x] Risk Amount Calculator
+- [x] Position Size Calculator
+- [x] Drawdown Calculator
+- [x] Portfolio Allocation
+- [x] Portfolio Return
+- [x] Portfolio Volatility
+- [x] Sharpe Ratio
+- [x] Kelly Criterion
+- [x] Value at Risk (VaR)
+- [x] Conditional Value at Risk (CVaR)
+- [x] Correlation
+- [x] Correlation Matrix
+- [x] Covariance
+- [x] Covariance Matrix
+- [x] Diversification Ratio
+- [x] Risk Contribution
 
 ---
 
-## Version 2.0
+## Version 2.0 🚧
 
-- Covariance Matrix
-- Correlation Matrix
-- Value at Risk (VaR)
-- Expected Shortfall (CVaR)
-- Diversification Metrics
-- Scenario Analysis
-- Stress Testing
-- Monte Carlo Simulation
+- [x] Random Portfolio Generator
+- [x] Efficient Frontier
+- [x] Risk Budget
+- [x] Markowitz Portfolio Optimizer
+
+- [ ] Multi-period Monte Carlo
+- [ ] Backtest Result
+- [ ] Performance Report
+- [ ] CSV Export
+- [ ] JSON Export
+
+---
+
+## Future
+
+- Black-Litterman Model
+- Hierarchical Risk Parity (HRP)
+- Equal Risk Contribution (ERC)
+- Portfolio Rebalancing
+- Utility Curve
+- Optional Visualization
