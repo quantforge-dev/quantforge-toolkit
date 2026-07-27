@@ -1,20 +1,28 @@
-# QuantForge Risk Toolkit
+# QuantForge Toolkit
 
-Professional open-source risk management toolkit for traders and investors.
-
-## Overview
-
-QuantForge Risk Toolkit is a modular Python project focused on practical risk management utilities for financial markets.
-
-The project emphasizes clean architecture, reliable calculations, reusable components, and comprehensive unit testing.
-
-It is designed for portfolio analysis, quantitative risk management, and financial research.
+Professional open-source Python toolkit for quantitative risk management, portfolio analytics, and financial modeling.
 
 ---
 
-## Features
+## Overview
 
-### Risk Management
+QuantForge Toolkit is a modular Python library designed for quantitative finance.
+
+The project focuses on building reliable and reusable components for:
+
+- Risk Management
+- Portfolio Analytics
+- Portfolio Optimization
+- Financial Simulations
+- Performance Analysis
+
+The toolkit is intended for educational, research, and software engineering purposes and **does not generate trading signals or investment recommendations**.
+
+---
+
+# Features
+
+## Risk Management
 
 - Risk Amount Calculator
 - Position Size Calculator
@@ -23,19 +31,18 @@ It is designed for portfolio analysis, quantitative risk management, and financi
 - Value at Risk (VaR)
 - Conditional Value at Risk (CVaR)
 
-### Portfolio Analytics
+---
 
+## Portfolio Analytics
+
+- Portfolio Allocation
 - Portfolio Return
 - Portfolio Volatility
-- Portfolio Allocation
 - Portfolio Statistics
-- Sharpe Ratio
-- Information Ratio
-- Treynor Ratio
-- Beta
-- Alpha
 
-### Portfolio Risk
+---
+
+## Portfolio Risk
 
 - Correlation
 - Correlation Matrix
@@ -45,19 +52,41 @@ It is designed for portfolio analysis, quantitative risk management, and financi
 - Risk Contribution
 - Risk Budget
 
-### Portfolio Optimization
+---
+
+## Performance Metrics
+
+- Sharpe Ratio
+- Beta
+- Alpha
+- Treynor Ratio
+- Information Ratio
+
+---
+
+## Portfolio Optimization
 
 - Random Portfolio Generator
 - Markowitz Portfolio Optimizer
 - Efficient Frontier
 
-### Simulation
+---
+
+## Simulation
 
 - Monte Carlo Simulation
+- Multi-period Monte Carlo Simulation
 
 ---
 
-## Project Structure
+## Models
+
+- Backtest Result
+- Performance Report
+
+---
+
+# Project Structure
 
 ```text
 app/
@@ -67,49 +96,79 @@ examples/
 models/
 tests/
 validation/
+.github/
 ```
 
 ---
 
-## Design Principles
+# Design Principles
 
-- Capital preservation first
-- Risk-aware calculations
-- Clean architecture
-- Modular design
+- Modular architecture
+- Clean code
+- Extensive unit testing
 - Reusable components
 - Reliable validation
-- Unit-tested code
+- Professional documentation
+- Open-source development
 
 ---
 
-## Roadmap
+# Development Status
 
-### Version 1
+## Version 1.0 ✅
 
-- Core risk management calculators
-- Portfolio analytics
-- Risk metrics
-- Unit testing
+Completed
+
+- Core Risk Calculators
+- Portfolio Analytics
+- Risk Metrics
+- Unit Tests
+- Examples
 - Documentation
 
-### Version 2
+---
 
-- Markowitz Portfolio Optimizer
-- Efficient Frontier
-- Advanced Monte Carlo
-- Performance Reports
+## Version 2.0 🚧
+
+In Progress
+
+Current focus:
+
 - Portfolio Optimization
-
-### Future
-
-- CSV Export
-- JSON Export
-- Optional Charts
-- Additional Quantitative Models
+- Advanced Simulations
+- Performance Models
+- Reporting
+- Export Utilities
 
 ---
 
-## License
+## Future Roadmap
+
+- Black-Litterman Model
+- Hierarchical Risk Parity (HRP)
+- Equal Risk Contribution (ERC)
+- Portfolio Rebalancing
+- Utility Curve
+- CSV Export
+- JSON Export
+- Optional Charts (Matplotlib)
+
+---
+
+# Testing
+
+All core modules are covered with unit tests using Python's built-in `unittest` framework.
+
+GitHub Actions automatically runs all tests on every commit.
+
+---
+
+# License
 
 MIT License
+
+---
+
+# Author
+
+Developed as an open-source quantitative finance toolkit with a focus on software engineering best practices.
