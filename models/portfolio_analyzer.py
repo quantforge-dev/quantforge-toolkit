@@ -14,12 +14,11 @@ from calculators.portfolio_volatility import (
 )
 
 from calculators.sharpe_ratio import (
-    calculate_sharpe_ratio,
+    sharpe_ratio,
 )
 
 
 class PortfolioAnalyzer:
-
     """
     Analyze a portfolio using
     existing toolkit modules.
@@ -32,7 +31,6 @@ class PortfolioAnalyzer:
         volatilities,
         risk_free_rate=0,
     ):
-
         self.returns = returns
         self.weights = weights
         self.volatilities = volatilities
@@ -41,7 +39,7 @@ class PortfolioAnalyzer:
     def analyze(self):
 
         total_return = calculate_portfolio_return(
-            self.returns
+            self.returns,
         )
 
         volatility = portfolio_volatility(
@@ -49,18 +47,14 @@ class PortfolioAnalyzer:
             self.volatilities,
         )
 
-        sharpe = calculate_sharpe_ratio(
+        sharpe = sharpe_ratio(
             total_return,
             self.risk_free_rate,
             volatility,
         )
 
         return {
-
             "return": total_return,
-
             "volatility": volatility,
-
             "sharpe_ratio": sharpe,
-
         }
