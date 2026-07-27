@@ -5,42 +5,31 @@ Portfolio Model.
 
 class Portfolio:
     """
-    Represents an investment portfolio.
+    Represents a portfolio of assets.
     """
 
     def __init__(
         self,
         name: str,
-        returns: dict,
-        weights: dict,
-        volatilities: dict,
+        assets: dict,
     ):
         self.name = name
-        self.returns = returns
-        self.weights = weights
-        self.volatilities = volatilities
-
-    @property
-    def assets(self):
-        """
-        Return portfolio asset names.
-        """
-        return list(self.weights.keys())
+        self.assets = assets
 
     @property
     def asset_count(self):
         """
         Number of assets.
         """
-        return len(self.weights)
+        return len(self.assets)
 
     @property
     def total_weight(self):
         """
-        Sum of portfolio weights.
+        Total portfolio weight.
         """
         return round(
-            sum(self.weights.values()),
+            sum(self.assets.values()),
             2,
         )
 
@@ -50,7 +39,5 @@ class Portfolio:
         """
         return {
             "name": self.name,
-            "returns": self.returns,
-            "weights": self.weights,
-            "volatilities": self.volatilities,
+            "assets": self.assets,
         }
