@@ -15,27 +15,49 @@ class TestPortfolioValidator(
 
         portfolio = Portfolio(
 
-            returns={
-                "BTC": 12,
-                "Gold": 5,
-            },
+            name="Demo",
 
-            weights={
+            assets={
+
                 "BTC": 50,
+
                 "Gold": 50,
+
             },
 
-            volatilities={
-                "BTC": 0.25,
-                "Gold": 0.10,
-            },
         )
 
         self.assertTrue(
+
             validate_portfolio(
                 portfolio
             )
+
         )
+
+    def test_invalid_total_weight(self):
+
+        portfolio = Portfolio(
+
+            name="Demo",
+
+            assets={
+
+                "BTC": 60,
+
+                "Gold": 60,
+
+            },
+
+        )
+
+        with self.assertRaises(
+            ValueError
+        ):
+
+            validate_portfolio(
+                portfolio
+            )
 
 
 if __name__ == "__main__":
