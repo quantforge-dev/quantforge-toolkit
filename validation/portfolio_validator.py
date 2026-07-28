@@ -6,28 +6,35 @@ Portfolio Validator.
 def validate_portfolio(
     portfolio,
 ):
+    """
+    Validate a Portfolio model.
+    """
 
-    if (
-        set(portfolio.returns.keys())
-        != set(portfolio.weights.keys())
-        or
-        set(portfolio.weights.keys())
-        != set(portfolio.volatilities.keys())
-    ):
+    if not portfolio.assets:
+
         raise ValueError(
-            "Portfolio assets must match."
+            "Portfolio cannot be empty."
         )
 
     total = round(
         sum(
-            portfolio.weights.values()
+            portfolio.assets.values()
         ),
         2,
     )
 
     if total != 100:
+
         raise ValueError(
-            "Weights must total 100."
+            "Asset weights must total 100."
         )
+
+    for weight in portfolio.assets.values():
+
+        if weight < 0:
+
+            raise ValueError(
+                "Negative weights are not allowed."
+            )
 
     return True
