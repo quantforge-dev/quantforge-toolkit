@@ -1,22 +1,10 @@
 # QuantForge Toolkit
 
-Professional open-source Python toolkit for quantitative risk management, portfolio analytics, and financial modeling.
+Professional open-source Python toolkit for quantitative risk management, portfolio analytics, portfolio optimization, and financial modeling.
 
----
+QuantForge Toolkit provides reusable quantitative finance components with a strong focus on software engineering, modular architecture, validation, and testing.
 
-## Overview
-
-QuantForge Toolkit is a modular Python library designed for quantitative finance.
-
-The project focuses on building reliable and reusable components for:
-
-- Risk Management
-- Portfolio Analytics
-- Portfolio Optimization
-- Financial Simulations
-- Performance Analysis
-
-The toolkit is intended for educational, research, and software engineering purposes and **does not generate trading signals or investment recommendations**.
+> This project is designed for research, education, and software development. It does **not** generate trading signals or investment recommendations.
 
 ---
 
@@ -31,16 +19,13 @@ The toolkit is intended for educational, research, and software engineering purp
 - Value at Risk (VaR)
 - Conditional Value at Risk (CVaR)
 
----
-
 ## Portfolio Analytics
 
 - Portfolio Allocation
 - Portfolio Return
 - Portfolio Volatility
 - Portfolio Statistics
-
----
+- Portfolio Analyzer
 
 ## Portfolio Risk
 
@@ -52,37 +37,36 @@ The toolkit is intended for educational, research, and software engineering purp
 - Risk Contribution
 - Risk Budget
 
----
-
 ## Performance Metrics
 
 - Sharpe Ratio
-- Beta
 - Alpha
+- Beta
 - Treynor Ratio
 - Information Ratio
-
----
 
 ## Portfolio Optimization
 
 - Random Portfolio Generator
 - Markowitz Portfolio Optimizer
 - Efficient Frontier
-
----
+- Portfolio Rebalancing
+- Portfolio Constraints
 
 ## Simulation
 
 - Monte Carlo Simulation
 - Multi-period Monte Carlo Simulation
 
----
-
 ## Models
 
+- Portfolio Model
 - Backtest Result
 - Performance Report
+
+## Reporting
+
+- Report Builder
 
 ---
 
@@ -103,63 +87,76 @@ validation/
 
 # Design Principles
 
-- Modular architecture
-- Clean code
-- Extensive unit testing
+QuantForge Toolkit follows a modular software architecture.
+
+Core goals include:
+
+- Clean architecture
 - Reusable components
-- Reliable validation
+- Independent calculators
 - Professional documentation
+- Strong validation
+- Extensive unit testing
 - Open-source development
-
----
-
-# Development Status
-
-## Version 1.0 ✅
-
-Completed
-
-- Core Risk Calculators
-- Portfolio Analytics
-- Risk Metrics
-- Unit Tests
-- Examples
-- Documentation
-
----
-
-## Version 2.0 🚧
-
-In Progress
-
-Current focus:
-
-- Portfolio Optimization
-- Advanced Simulations
-- Performance Models
-- Reporting
-- Export Utilities
-
----
-
-## Future Roadmap
-
-- Black-Litterman Model
-- Hierarchical Risk Parity (HRP)
-- Equal Risk Contribution (ERC)
-- Portfolio Rebalancing
-- Utility Curve
-- CSV Export
-- JSON Export
-- Optional Charts (Matplotlib)
 
 ---
 
 # Testing
 
-All core modules are covered with unit tests using Python's built-in `unittest` framework.
+The project uses Python's built-in `unittest` framework.
 
-GitHub Actions automatically runs all tests on every commit.
+Every commit is automatically tested using GitHub Actions to ensure compatibility across the project.
+
+---
+
+# Current Status
+
+## Version 1.0
+
+Released
+
+Included:
+
+- Core risk management tools
+- Portfolio analytics
+- Initial documentation
+- Unit tests
+
+## Version 2.0
+
+Released
+
+Major additions:
+
+- Portfolio Optimization
+- Efficient Frontier
+- Markowitz Optimizer
+- Monte Carlo Simulation
+- Portfolio Analyzer
+- Portfolio Model
+- Portfolio Validation
+- Report Builder
+- Performance Analytics
+- Risk Budget
+- Improved documentation
+- Expanded examples
+- GitHub Actions CI
+
+---
+
+# Roadmap
+
+Future development includes:
+
+- Python package distribution
+- PyPI release
+- API documentation
+- Black-Litterman Model
+- Hierarchical Risk Parity (HRP)
+- Equal Risk Contribution (ERC)
+- Optional visualization module
+- CSV export
+- JSON export
 
 ---
 
@@ -171,4 +168,6 @@ MIT License
 
 # Author
 
-Developed as an open-source quantitative finance toolkit with a focus on software engineering best practices.
+QuantForge Toolkit is an open-source software engineering project focused on quantitative finance, portfolio analytics, and risk management.
+
+Designed with an emphasis on maintainability, modularity, and production-quality code.
